@@ -22,6 +22,15 @@ const education = [
   },
 ];
 
+const handleDownloadResume = () => {
+  const link = document.createElement('a');
+  link.href = 'public/TEJ_BODDU.pdf';
+  link.download = 'TEJ_BODDU.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-muted/30">
@@ -59,6 +68,7 @@ export const AboutSection = () => {
             <Button
               size="lg"
               className="gradient-bg text-primary-foreground gap-2"
+              onClick={handleDownloadResume}
             >
               <Download className="w-4 h-4" />
               Download Resume
