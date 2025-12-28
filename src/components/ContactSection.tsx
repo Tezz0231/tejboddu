@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mail, Phone, Linkedin, Github, Code, Send, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
+
+// Configuration constants
+const EMAILJS_PUBLIC_KEY = "T4NqYJ8bpctxuD5mN";
+const EMAILJS_SERVICE_ID = "service_u1cv9sj";
+const EMAILJS_TEMPLATE_ID = "template_zqglzd8";
 
 const contactInfo = [
   {
@@ -47,6 +53,11 @@ export const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Initialize EmailJS once when component mounts
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -54,26 +65,64 @@ export const ContactSection = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validateEmail = (email: string) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Client-side validation
+    if (!validateEmail(formData.email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Send email via EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "tej91101@gmail.com",
+        }
+      );
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
 
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
+      // Clear form on success
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section id="contact" className="section-padding bg-muted/30">
       <div className="container-tight">
-        {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
           <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider">
             Get In Touch
@@ -87,7 +136,6 @@ export const ContactSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Contact Info */}
           <div className="space-y-8">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold text-foreground">
@@ -126,7 +174,6 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="glass-card rounded-2xl p-6 md:p-8">
             <h3 className="text-xl font-bold text-foreground mb-6">
               Send a Message
@@ -134,10 +181,7 @@ export const ContactSection = () => {
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="space-y-2">
-                <label
-                  htmlFor="name"
-                  className="text-sm font-medium text-foreground"
-                >
+                <label htmlFor="name" className="text-sm font-medium text-foreground">
                   Name
                 </label>
                 <Input
@@ -152,10 +196,7 @@ export const ContactSection = () => {
               </div>
 
               <div className="space-y-2">
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium text-foreground"
-                >
+                <label htmlFor="email" className="text-sm font-medium text-foreground">
                   Email
                 </label>
                 <Input
@@ -171,10 +212,7 @@ export const ContactSection = () => {
               </div>
 
               <div className="space-y-2">
-                <label
-                  htmlFor="message"
-                  className="text-sm font-medium text-foreground"
-                >
+                <label htmlFor="message" className="text-sm font-medium text-foreground">
                   Message
                 </label>
                 <Textarea
