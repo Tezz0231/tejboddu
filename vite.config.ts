@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   // Make built assets use relative paths so the site works when served from a subpath
   // or from static hosts that don't serve at the domain root.
-  base: "./",
+  base: "/tejboddu/",
 
   server: {
     host: "::",
