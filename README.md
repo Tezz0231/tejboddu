@@ -51,11 +51,11 @@ If you'd like to run this project locally, follow these steps:
 Plaintext
 
 ├── src
-│   ├── components   # Reusable UI components (Navbar, Button, etc.)
-│   ├── sections     # Large page sections (About, Projects, Contact)
-│   ├── hooks        # Custom React hooks (Theme management)
-│   ├── lib          # Utility functions and configuration
-│   └── App.tsx      # Main application entry
+│   ├── components    # Reusable UI components (Navbar, Button, etc.)
+│   ├── sections      # Large page sections (About, Projects, Contact)
+│   ├── hooks         # Custom React hooks (Theme management)
+│   ├── lib           # Utility functions and configuration
+│   └── App.tsx       # Main application entry
 📬 Contact Me
 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
 
