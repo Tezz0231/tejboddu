@@ -105,17 +105,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-up delay-600">
-          <button
-            onClick={() => scrollToSection("#about")}
-            className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Scroll down"
-          >
-            <span className="text-sm font-medium">Scroll Down</span>
-            <ArrowDown className="w-5 h-5 animate-bounce" />
-          </button>
-        </div>
+
       </div>
     </section>
   );

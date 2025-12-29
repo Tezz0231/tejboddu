@@ -14,6 +14,8 @@ const projects = [
     technologies: ["PyTorch", "Deep Learning", "CNN", "Explainable AI"],
     icon: Brain,
     gradient: "from-purple-500 to-pink-500",
+    codeLink: "https://github.com/Tezz0231/Pneumonet-",
+    demoLink: "https://www.pneumonet.me/",
   },
   {
     title: "Online Voting System",
@@ -27,6 +29,8 @@ const projects = [
     technologies: ["MongoDB", "Express.js", "Angular", "Node.js"],
     icon: Vote,
     gradient: "from-blue-500 to-cyan-500",
+    codeLink: "https://github.com/Tezz0231/online-voting-system-",
+    demoLink: "https://online-voting-system-h9ok.onrender.com/",
   },
 ];
 
@@ -101,11 +105,11 @@ export const ProjectsSection = () => {
 
                 {/* Actions */}
                 <div className="flex gap-3 pt-2">
-                  <Button variant="outline" size="sm" className="gap-2">
+                  <Button variant="outline" size="sm" className="gap-2" onClick={() => window.open(project.codeLink, '_blank')}>
                     <Github className="w-4 h-4" />
                     View Code
                   </Button>
-                  <Button size="sm" className="gap-2 gradient-bg text-primary-foreground">
+                  <Button size="sm" className="gap-2 gradient-bg text-primary-foreground" onClick={() => window.open(project.demoLink, '_blank')}>
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
                   </Button>

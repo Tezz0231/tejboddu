@@ -46,11 +46,7 @@ export const Navbar = () => {
     }
   };
 
-  const handleNavClick = (href: string) => {
-    setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
+
 
   return (
     <header
@@ -65,10 +61,6 @@ export const Navbar = () => {
         <a
           href="#home"
           className="text-2xl font-bold tracking-tight"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavClick("#home");
-          }}
         >
           <span className="text-foreground">Tej</span>
           <span className="gradient-text">Boddu</span>
@@ -80,10 +72,6 @@ export const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(item.href);
-              }}
               className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
             >
               {item.label}
@@ -123,10 +111,6 @@ export const Navbar = () => {
               <a
                 key={item.label}
                 href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.href);
-                }}
                 className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
               >
                 {item.label}
