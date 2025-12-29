@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+🚀 Tej Boddu | Professional Portfolio
+Welcome to the repository for my personal portfolio. This project serves as a digital hub to showcase my skills, projects, and professional journey as a developer.
 
-## Project info
+🌐 Live Demo
+[Insert Your Live URL Here] (e.g., https://www.google.com/search?q=https://tej-boddu-portfolio.lovable.app)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+✨ Features
+Responsive Design: Fully optimized for mobile, tablet, and desktop screens.
 
-## How can I edit this code?
+Dark/Light Mode: Seamless theme switching with system preference detection.
 
-There are several ways of editing your application.
+Smooth Navigation: Custom-built navigation with smooth-scroll section anchors.
 
-**Use Lovable**
+Modern UI: Styled with Tailwind CSS and shadcn/ui for a clean, professional aesthetic.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Project Showcase: A curated list of my work with links and descriptions.
 
-Changes made via Lovable will be committed automatically to this repo.
+Interactive Contact: Built-in contact section for potential collaborations.
 
-**Use your preferred IDE**
+🛠️ Tech Stack
+This portfolio is built using modern web technologies:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Framework: React with Vite
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Language: TypeScript
 
-Follow these steps:
+Styling: Tailwind CSS
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Components: shadcn/ui & Lucide React (Icons)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Deployment: Lovable.dev
 
-# Step 3: Install the necessary dependencies.
-npm i
+🚀 Getting Started
+If you'd like to run this project locally, follow these steps:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Clone the repo:
+
+Bash
+
+git clone <your-repo-url>
+Install dependencies:
+
+Bash
+
+npm install
+Run the development server:
+
+Bash
+
 npm run dev
-```
+Build for production:
 
-**Edit a file directly in GitHub**
+Bash
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+npm run build
+📁 Project Structure
+Plaintext
 
-**Use GitHub Codespaces**
+├── src
+│   ├── components   # Reusable UI components (Navbar, Button, etc.)
+│   ├── sections     # Large page sections (About, Projects, Contact)
+│   ├── hooks        # Custom React hooks (Theme management)
+│   ├── lib          # Utility functions and configuration
+│   └── App.tsx      # Main application entry
+📬 Contact Me
+I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+LinkedIn: [Your LinkedIn Profile]
 
-## What technologies are used for this project?
+Email: [Your Email Address]
 
-This project is built with:
+GitHub: [@YourGitHubUsername]
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Created with ❤️ by Tej Boddu
 
-## How can I deploy this project?
+How to use this:
+Open your README.md file in your editor.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Delete the existing text.
 
-## Can I connect a custom domain to my Lovable project?
+Paste the content above.
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Important: Replace the bracketed text (like [Your LinkedIn Profile]) with your actual links!
