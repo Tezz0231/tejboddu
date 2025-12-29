@@ -1,59 +1,53 @@
-🚀 Tej Boddu | Professional Portfolio
+# Tej Boddu | Professional Portfolio
+
 Welcome to the repository for my personal portfolio. This project serves as a digital hub to showcase my skills, projects, and professional journey as a developer.
 
-🌐 Live Demo
-[Insert Your Live URL Here] (e.g., https://www.google.com/search?q=https://tej-boddu-portfolio.lovable.app)
+## 🌐 Live Demo
 
-✨ Features
-Responsive Design: Fully optimized for mobile, tablet, and desktop screens.
+You can view the live version of my portfolio here: **[https://tej-boddu-portfolio.lovable.app](https://tej-boddu-portfolio.lovable.app)**
 
-Dark/Light Mode: Seamless theme switching with system preference detection.
+## ✨ Features
 
-Smooth Navigation: Custom-built navigation with smooth-scroll section anchors.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop screens.
+- **Dark/Light Mode**: Seamless theme switching with system preference detection.
+- **Smooth Navigation**: Custom-built navigation with smooth-scroll section anchors.
+- **Modern UI**: Styled with Tailwind CSS and shadcn/ui for a clean, professional aesthetic.
+- **Project Showcase**: A curated list of my work with links and descriptions.
+- **Interactive Contact**: Built-in contact section for potential collaborations.
 
-Modern UI: Styled with Tailwind CSS and shadcn/ui for a clean, professional aesthetic.
+## 🛠️ Tech Stack
 
-Project Showcase: A curated list of my work with links and descriptions.
-
-Interactive Contact: Built-in contact section for potential collaborations.
-
-🛠️ Tech Stack
 This portfolio is built using modern web technologies:
 
-Framework: React with Vite
+- **Framework**: React with Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: shadcn/ui & Lucide React (Icons)
+- **Deployment**: Lovable.dev
 
-Language: TypeScript
+## 🚀 Getting Started
 
-Styling: Tailwind CSS
-
-Components: shadcn/ui & Lucide React (Icons)
-
-Deployment: Lovable.dev
-
-🚀 Getting Started
 If you'd like to run this project locally, follow these steps:
 
-Clone the repo:
+1.  **Clone the repo:**
+    ```bash
+    git clone https://github.com/Tezz0231/tejboddu.git
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
 
-Bash
+## 📁 Project Structure
 
-git clone <your-repo-url>
-Install dependencies:
-
-Bash
-
-npm install
-Run the development server:
-
-Bash
-
-npm run dev
-Build for production:
-
-Bash
-
-npm run build
-📁 Project Structure
 Plaintext
 
 ├── src
