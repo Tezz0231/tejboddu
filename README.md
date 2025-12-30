@@ -4,7 +4,7 @@ Welcome to the repository for my personal portfolio. This project serves as a di
 
 ## 🌐 Live Demo
 
-You can view the live version of my portfolio here: **[https://tej-boddu-portfolio.lovable.app](https://tej-boddu-portfolio.lovable.app)**
+You can view the live version of my portfolio here: **[https://tezz0231.github.io/tejboddu/](https://tezz0231.github.io/tejboddu/)**
 
 ## ✨ Features
 
@@ -59,13 +59,9 @@ Plaintext
 📬 Contact Me
 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
 
-LinkedIn: [Your LinkedIn Profile]
+LinkedIn: (https://www.linkedin.com/in/tej-boddu)
 
-Email: [Your Email Address]
-
-GitHub: [@YourGitHubUsername]
-
-Created with ❤️ by Tej Boddu
+Email: Tej91101@gmail.com
 
 How to use this:
 Open your README.md file in your editor.
