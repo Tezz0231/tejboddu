@@ -22,16 +22,16 @@ const education = [
   },
 ];
 
-const handleDownloadResume = () => {
-  const link = document.createElement('a');
-  link.href = '/TEJ_BODDU.pdf';
-  link.download = 'TEJ_BODDU.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
-
 export const AboutSection = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = 'TEJ_BODDU.pdf';
+    link.download = 'TEJ_BODDU.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about" className="section-padding bg-muted/30">
       <div className="container-tight">
