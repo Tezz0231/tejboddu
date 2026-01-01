@@ -25,7 +25,7 @@ const education = [
 export const AboutSection = () => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'TEJ_BODDU.pdf';
+    link.href = '/tejboddu/TEJ_BODDU.pdf';
     link.download = 'TEJ_BODDU.pdf';
     document.body.appendChild(link);
     link.click();
